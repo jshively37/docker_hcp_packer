@@ -8,5 +8,5 @@ End goal is the docker container will be published to Docker Hub and HCP Packer.
 
 ### Versions
 
-Packer version: `1.8.4`
+Packer version: `1.8.4`\
 Docker (mac): `Docker version 20.10.17, build 100c701`
