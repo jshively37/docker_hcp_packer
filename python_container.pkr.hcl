@@ -7,6 +7,10 @@ packer {
   }
 }
 
+locals {
+  directory = "/home/packer"
+}
+
 source "docker" "python" {
   image  = "python:latest"
   commit = true
@@ -23,18 +27,18 @@ build {
 
   provisioner "shell" {
     inline = [
-      "mkdir -p /home/packer",
+      "mkdir -p ${local.directory}",
     ]
   }
 
   provisioner "file" {
     source      = "requirements.txt"
-    destination = "/home/packer/requirements.txt"
+    destination = "${local.directory}/requirements.txt"
   }
 
   provisioner "shell" {
     inline = [
-      "pip install -r /home/packer/requirements.txt",
+      "pip install -r ${local.directory}/requirements.txt",
     ]
   }
 
