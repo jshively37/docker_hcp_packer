@@ -2,7 +2,7 @@
 
 **WIP**
 
-Repository that will build a simple Python docker container using Packer.
+Repository that will build a simple Python docker image locally using Packer.
 
 End goal:
  * Docker container will be published to Docker Hub and HCP Packer.
